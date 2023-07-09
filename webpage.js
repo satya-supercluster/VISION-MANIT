@@ -102,7 +102,7 @@ function validate(){
     }
 }
 function name_validation(value){
-    if(value.length.trim()>=5){
+    if(value.trim().length>=5){
         // if(value[0]>='0'&&value[0]<='9'){ return false;}
         let p=true;
         for(var i=0;i<value.length;i++){
