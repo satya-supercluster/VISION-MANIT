@@ -102,8 +102,8 @@ function validate(){
     }
 }
 function name_validation(value){
-    if(value.length>=8){
-        if(value[0]>='0'&&value[0]<='9'){ return false;}
+    if(value.length.trim()>=5){
+        // if(value[0]>='0'&&value[0]<='9'){ return false;}
         let p=true;
         for(var i=0;i<value.length;i++){
             if((value[i]>='A'&&value[i]<='Z')||(value[i]>='a'&&value[i]<='z')||value[i]==" "){
@@ -135,7 +135,8 @@ function password_validation(value){
     if(value.length>=8) return true;
     else return false;
 }
-function email_validation(value){
-    var validFormat=new RegExp("/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/");
-    return value.match(validFormat);
-}
+// function email_validation(value){
+//     var validFormat=new RegExp("/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/");
+//     return value.match(validFormat);
+// }       
+//Pta ni kya hi h!!! chalta to h ni, jo chalta usko bhi kharab kr deta ;(
