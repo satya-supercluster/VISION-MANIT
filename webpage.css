@@ -279,20 +279,20 @@ input::-ms-clear {
     color:#fff;} */
 
 .container {
-  position: absolute;
-  top: 6.1em;
-  background: transparent;
-  backdrop-filter: blur(10px);
-  border: 2px solid #162938;
-  color: #fff;
-  border-radius: 10px;
-  padding: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  font-size: 1.6em;
-  height: 200px;
-  width: 50vw;
-  z-index: -1;
+    position: absolute;
+    width:70vw;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid #162938;
+    color:#fff;
+    border-radius: 10px;
+    padding: 35px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-size: 1.6em;
+    /* height:200px;
+    width:50vw; */
+    z-index: -1;
 }
