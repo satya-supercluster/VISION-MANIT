@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="webpage.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            VISION MANIT
+        </div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contacts</li>
+                <li>Learn</li>
+                <li>Discuss</li>
+                <li class="line"></li>
+            </ul>
+        </nav>
+        <div id="register"> 
+            <button onclick="show()" id="start"> Login / Register </button>
+        </div>
+    </header>
+    <div class="screen">
+        <span class="close-icon">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form-box login-window">
+            <h2>Login</h2>
+            <form onclick="validation()" action="index.html">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" name="" class="email-l"required>
+                    <label>Email</label>
+                    <div class="m-inavlid-l invalid"></div>
+                </div>
+                <div class="input-box">
+                    <span class="icon" >
+                        <ion-icon name="eye-off" class="pw" ></ion-icon>
+                    </span>
+                    <input type="password" name="" class="tp" required>
+                    <label>Password</label>
+                    <div class="p-invalid-l invalid"></div>
+                </div>
+                <div class="remember-forget">
+                    <span class="chekmark"></span>
+                    <label class="remember"><input type="checkbox"
+                        >Remember me</label>
+                    <label class="forget">Forgot Password?</label>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account?</p>
+                    <a href="#" class="reg-link">Register</a>
+                </div>
+            </form>
+        </div>
+        <div class="form-box registration-window">
+            <h2>Registration</h2>
+            <form onclick="validate()" action="index.html">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" name="" class="uname" required>
+                    <label>Username</label>
+                    <p class="n-invalid-r invalid">
+                        
+                    </p>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="call"></ion-icon>
+                    </span>
+                    <input type="text" name="" class="contact" required>
+                    <label>Contact No.</label>
+                    <div class="c-invalid-r invalid">
+                        
+                    </div>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" name="" class="email-r" required>
+                    <label>Email</label>
+                    <div class="m-invalid-r invalid">
+            
+                    </div>
+                </div>
+                <div class="input-box">
+                    <span class="icon" >
+                        <ion-icon name="eye-off" class="pw1" ></ion-icon>
+                    </span>
+                    <input type="password" name="" class="tp1" required>
+                    <label>Set Password</label>
+                    <div class="p-invalid-r invalid"></div>
+                </div>
+                
+                <div class="remember-forget reg-tc">
+                <label class="remember "><input type="checkbox" required
+                    >Agree to the Terms & Conditions</label>
+            </div>
+                <button type="submit" class="btn">Register</button>
+                <!-- <input type="submit" value="Register" class="register-btn" > -->
+                <div class="login-register">
+                    <p>Already have an account?</p>
+                    <a href="#" class="login-link">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="webpage.js"></script>
+</html>
