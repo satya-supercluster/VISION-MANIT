@@ -99,7 +99,6 @@ header nav li:hover {
   cursor: default;
 }
 .screen {
-  position: relative;
   width: 400px;
   height: 440px;
   background: transparent;
@@ -278,7 +277,7 @@ input::-ms-clear {
     font-size: 1em;
     color:#fff;} */
 
-.container {
+/* .container {
     position: absolute;
     width:70vw;
     background:transparent;
@@ -295,4 +294,4 @@ input::-ms-clear {
     /* height:200px;
     width:50vw; */
     z-index: -1;
-}
+} */
