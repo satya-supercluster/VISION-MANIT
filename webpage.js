@@ -140,3 +140,15 @@ function password_validation(value){
 //     return value.match(validFormat);
 // }       
 //Pta ni kya hi h!!! chalta to h ni, jo chalta usko bhi kharab kr deta ;(
+let menu = document.querySelector(".menu-icon");
+let nav=document.querySelector(".navbar");
+menu.addEventListener("click",function(){
+    if(menu.name=="menu"){
+        menu.name="close";
+        nav.style.display="flex";
+    }
+    else{
+        menu.name="menu";
+        nav.style.display="none";
+    }
+});

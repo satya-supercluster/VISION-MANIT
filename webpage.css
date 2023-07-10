@@ -18,10 +18,10 @@ header {
   justify-content: space-between;
   position: fixed;
   height: 8vh;
-  top: 0;
+  top:0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1;
 }
 header #logo {
   font-size: 2em;
@@ -34,27 +34,28 @@ header #logo {
 header nav {
   width: 60vw;
   display: flex;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
   /* margin:5px 0 2px 0;
     padding:2px 0 2px 0; */
   flex-wrap: wrap;
   /* border-right: 5px solid aliceblue; */
+  transition: width .5s ease;
 }
 #register {
-  width: 15vw;
+  width: 20vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #start {
   border: 3px solid white;
-  width: 10vw;
+  /* width: 10vw; */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 15px 0 15px 0;
-  padding: 10px 10px;
+  /* margin: 0px 0 10px 0; */
+  padding: 10px 20px;
   border-radius: 10px;
   font-size: 1em;
   font-weight: 600;
@@ -71,9 +72,9 @@ header nav {
 header nav li {
   list-style: none;
   display: inline-block;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 5px 15px 5px 15px;
+  margin: 5px 10px 5px 10px;
   padding: 2px 8px 2px 8px;
   border-radius: 8px;
   /* display:flex;
@@ -82,22 +83,39 @@ header nav li {
   font-size: 1.5em;
   font-weight: 510;
   color: aliceblue;
-  transition: 0.4s ease-in-out;
+  /* transition: 0.5s ease-in-out; */
   cursor: pointer;
 }
 header nav li:hover {
   color: #162938;
   background-color: aliceblue;
 }
-.line {
+header nav li .iconl{
+  height: 50vh;
+  width:50vw;
+  font-size:50px;
+  color:white;
+}
+header .menu{
+  display:none;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.7em;
+  width:5vw;
+  padding:10px 10px 10px 10px;
+  margin:10px 0 2px 0;
+  color:#fff;
+
+}
+/* .line {
   position: absolute;
-  /* margin:5px 0px 5px 0px; */
+  margin:5px 0px 5px 0px;
   padding: 0;
   height: 30px;
-  /* right:13vw; */
+  right:13vw;
   border: 2.5px solid rgb(198, 185, 185);
   cursor: default;
-}
+} */
 .screen {
   width: 400px;
   height: 440px;
@@ -112,7 +130,7 @@ header nav li:hover {
   transition: height 0.2s ease;
   /* padding: 0px 40px 0px 40px; */
   overflow: hidden;
-  z-index: 100;
+  z-index: 2;
 }
 .form-box {
   width: 100%;
@@ -145,7 +163,7 @@ header nav li:hover {
 .input-box input {
   position: absolute;
   bottom: -12px;
-  width: 100%;
+  width: 88%;
   height: 100%;
   background: transparent;
   border: none;
@@ -159,7 +177,7 @@ header nav li:hover {
   font-size: 1.5em;
   color: #162938;
   line-height: 57px;
-  z-index: 1;
+  z-index: 3;
 }
 .remember-forget {
   display: flex;
@@ -297,31 +315,41 @@ input::-ms-clear {
     z-index: -1;
 } */
 @media (max-width: 1050px){
+  header{
+    border-bottom: 2px solid #fff;
+  }
   header #logo{
-    width:50vw;
+    width:47vw;
   }
   header #register{
-    width:50vw;
+    width:47vw;
   }
   header #start{
-    width:70%;
-    padding: 10px 25px 10px 25px;
+    padding: 10px 35px 10px 35px;
   }
   header nav{
+    display: none;
     position:absolute;
-    justify-content: left;
-    top:5em;
-    left:1em;
-    width:100vw;
-    height:13em;
-    border-top: 0.5px solid #fff;
-    border-bottom: 0.5px solid #fff;
+    justify-content: right;
+    align-items: center;
+    top:4em;
+    right:.6em;
+    width:auto;
+    height:auto;
+    border:0.5px solid #fff;
+    border-radius: 8px;
+    background-color: #162938;
   }
   header nav li{
+    transition: all .5s ease-in-out;
     display: block;
   }
   .line{
     display:none;
+  }
+  header .menu{
+    display:flex;
+    
   }
 }
 
@@ -330,30 +358,41 @@ input::-ms-clear {
   padding: 10px 10px 10px 10px;
 }
 }
-@media (max-width: 450px){
+@media (max-width: 460px){
 header #logo{
   font-size: 1.5em;
 }
 }
 @media (max-width: 415px){
+  #register{
+    width:10vw;
+  }
   #register #start{
     padding: 5px 8px 8px 8px;
     font-size: .75em;
   }
-  #logo{
-    font-size: 1.5em;
+  header #logo{
+    font-size: 1.2em;
   }
 .screen{
   width:80%;
 }
 .invalid{
   font-size: .8em;
-  bottom:-20px;
+  bottom:-1.4em;
 }
 .registration-window{
   width:80%;
 }
-header nav{
+/* header nav{
   top:3.5em;
+} */
+header .menu{
+  width:8vw;
 }
+}
+@media (max-height:550px){
+  header{
+    top:15px;
+  }
 }
