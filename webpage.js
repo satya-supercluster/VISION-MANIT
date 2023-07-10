@@ -58,7 +58,7 @@ function validation(){
         error6.innerHTML="";
     }
     else{
-        error6.innerHTML="Password should be greater than 8 characters";
+        error6.innerHTML="Invalid Password (>=8)";
         return false;
     }
     return true;
