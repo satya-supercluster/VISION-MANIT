@@ -97,7 +97,7 @@ function validate(){
         error2.innerHTML="";
     }
     else{
-        error2.innerHTML="Password should be greater than 8 characters";
+        error2.innerHTML="Invalid Password (>=8)";
         return false;
     }
 }
