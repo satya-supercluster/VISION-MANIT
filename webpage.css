@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
 }
 header {
+  margin-top: 5px;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -26,7 +27,6 @@ header #logo {
   font-size: 2em;
   width: 20vw;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   color: aliceblue;
@@ -112,6 +112,7 @@ header nav li:hover {
   transition: height 0.2s ease;
   /* padding: 0px 40px 0px 40px; */
   overflow: hidden;
+  z-index: 100;
 }
 .form-box {
   width: 100%;
@@ -295,3 +296,64 @@ input::-ms-clear {
     width:50vw;
     z-index: -1;
 } */
+@media (max-width: 1050px){
+  header #logo{
+    width:50vw;
+  }
+  header #register{
+    width:50vw;
+  }
+  header #start{
+    width:70%;
+    padding: 10px 25px 10px 25px;
+  }
+  header nav{
+    position:absolute;
+    justify-content: left;
+    top:5em;
+    left:1em;
+    width:100vw;
+    height:13em;
+    border-top: 0.5px solid #fff;
+    border-bottom: 0.5px solid #fff;
+  }
+  header nav li{
+    display: block;
+  }
+  .line{
+    display:none;
+  }
+}
+
+@media (max-width: 490px){
+#register #start{
+  padding: 10px 10px 10px 10px;
+}
+}
+@media (max-width: 450px){
+header #logo{
+  font-size: 1.5em;
+}
+}
+@media (max-width: 415px){
+  #register #start{
+    padding: 5px 8px 8px 8px;
+    font-size: .75em;
+  }
+  #logo{
+    font-size: 1.5em;
+  }
+.screen{
+  width:80%;
+}
+.invalid{
+  font-size: .8em;
+  bottom:-20px;
+}
+.registration-window{
+  width:80%;
+}
+header nav{
+  top:3.5em;
+}
+}
