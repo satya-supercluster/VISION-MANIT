@@ -1,129 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="webpage.css">
-</head>
-<body>
+    <link rel="stylesheet" href="webpage.css" />
+  </head>
+  <body>
     <header>
-        <div id="logo">
-            VISION MANIT
-        </div>
-        <nav class="navbar">
-            <ul>
-                <li>Home</li>
-                <li>Learn</li>
-                <li>Practice</li>
-                <li>Discuss</li>
-                <li>Contacts</li>
-                <!-- <li class="line"></li> -->
-            </ul>
-        </nav>
-        <div id="register"> 
-            <button onclick="show()" id="start"> Login / Register </button>
-        </div>
-        <div class="menu">
+      <div id="logo">VISION MANIT</div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#introduction">Home</a></li>
+          <li><a href="#recent">Recent</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <!-- <li class="line"></li> -->
+        </ul>
+      </nav>
+      <div id="register">
+        <button onclick="show()" id="start">Login / Register</button>
+      </div>
+      <div class="menu">
         <span>
-            <ion-icon name="menu"class="menu-icon"></ion-icon>
+          <ion-icon name="menu" class="menu-icon"></ion-icon>
         </span>
-    </div>
+      </div>
     </header>
     <div class="screen">
-        <span class="close-icon">
-            <ion-icon name="close"></ion-icon>
-        </span>
-        <div class="form-box login-window">
-            <h2>Login</h2>
-            <form onclick="validation()" action="index.html">
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
-                    </span>
-                    <input type="email" name="" class="email-l"required>
-                    <label>Email</label>
-                    <div class="m-inavlid-l invalid"></div>
-                </div>
-                <div class="input-box">
-                    <span class="icon" >
-                        <ion-icon name="eye-off" class="pw" ></ion-icon>
-                    </span>
-                    <input type="password" name="" class="tp" required>
-                    <label>Password</label>
-                    <div class="p-invalid-l invalid"></div>
-                </div>
-                <div class="remember-forget">
-                    <label class="remember"><input type="checkbox" class="checkmark"
-                        >Remember me</label>
-                    <label class="forget">Forgot Password?</label>
-                </div>
-                <button type="submit" class="btn">Login</button>
-                <div class="login-register">
-                    <p class="ac">Don't have an account?</p>
-                    <a href="#" class="reg-link">Register</a>
-                </div>
-            </form>
-        </div>
-        <div class="form-box registration-window">
-            <h2>Registration</h2>
-            <form onclick="validate()" action="index.html">
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="person"></ion-icon>
-                    </span>
-                    <input type="text" name="" class="uname" required>
-                    <label>Username</label>
-                    <p class="n-invalid-r invalid">
-                        
-                    </p>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="call"></ion-icon>
-                    </span>
-                    <input type="text" name="" class="contact" required>
-                    <label>Contact No.</label>
-                    <div class="c-invalid-r invalid">
-                        
-                    </div>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
-                    </span>
-                    <input type="email" name="" class="email-r" required>
-                    <label>Email</label>
-                    <div class="m-invalid-r invalid">
-            
-                    </div>
-                </div>
-                <div class="input-box">
-                    <span class="icon" >
-                        <ion-icon name="eye-off" class="pw1" ></ion-icon>
-                    </span>
-                    <input type="password" name="" class="tp1" required>
-                    <label>Set Password</label>
-                    <div class="p-invalid-r invalid"></div>
-                </div>
-                
-                <div class="remember-forget reg-tc">
-                <label class="remember "><input type="checkbox" required
-                    >Agree to the Terms & Conditions</label>
-            </div>
-                <button type="submit" class="btn">Register</button>
-                <!-- <input type="submit" value="Register" class="register-btn" > -->
-                <div class="login-register">
-                    <p>Already have an account?</p>
-                    <a href="#" class="login-link">Login</a>
-                </div>
-            </form>
-        </div>
+      <span class="close-icon">
+        <ion-icon name="close"></ion-icon>
+      </span>
+      <div class="form-box login-window">
+        <h2>Login</h2>
+        <form onclick="validation()" action="index.html">
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="email" name="" class="email-l" required />
+            <label>Email</label>
+            <div class="m-inavlid-l invalid"></div>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="eye-off" class="pw"></ion-icon>
+            </span>
+            <input type="password" name="" class="tp" required />
+            <label>Password</label>
+            <div class="p-invalid-l invalid"></div>
+          </div>
+          <div class="remember-forget">
+            <label class="remember"
+              ><input type="checkbox" class="checkmark" />Remember me</label
+            >
+            <label class="forget">Forgot Password?</label>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p class="ac">Don't have an account?</p>
+            <a href="#" class="reg-link">Register</a>
+          </div>
+        </form>
+      </div>
+      <div class="form-box registration-window">
+        <h2>Registration</h2>
+        <form onclick="validate()" action="index.html">
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="person"></ion-icon>
+            </span>
+            <input type="text" name="" class="uname" required />
+            <label>Username</label>
+            <p class="n-invalid-r invalid"></p>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="call"></ion-icon>
+            </span>
+            <input type="text" name="" class="contact" required />
+            <label>Contact No.</label>
+            <div class="c-invalid-r invalid"></div>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="email" name="" class="email-r" required />
+            <label>Email</label>
+            <div class="m-invalid-r invalid"></div>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="eye-off" class="pw1"></ion-icon>
+            </span>
+            <input type="password" name="" class="tp1" required />
+            <label>Set Password</label>
+            <div class="p-invalid-r invalid"></div>
+          </div>
+
+          <div class="remember-forget reg-tc">
+            <label class="remember"
+              ><input type="checkbox" required />Agree to the Terms &
+              Conditions</label
+            >
+          </div>
+          <button type="submit" class="btn">Register</button>
+          <!-- <input type="submit" value="Register" class="register-btn" > -->
+          <div class="login-register">
+            <p>Already have an account?</p>
+            <a href="#" class="login-link">Login</a>
+          </div>
+        </form>
+      </div>
     </div>
-    <!-- <div class="container">
-        <p>Vision provide a suitable platform for the students of MANIT to showcase their technical skills.It motivate them for research and development work in any engineering related field.Vision guide them during their research work (as much as its possible) and to support them financially also (selected teams).It provides them suitable facilities for their research work.(like by providing 24X7 lab and equipments).To motivate students in achieving the in depth knowledge of their respective branches.</p>
-    </div> -->
-</body>
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-<script src="webpage.js"></script>
+    <div class="actual-content">
+      <div>
+        <div class="intro" id="introduction">
+          <div class="heading">VISION</div>
+          <div class="message">The Technical Club Of MANIT</div>
+          <button type="submit" class="discover">
+            Start Discovering Today
+          </button>
+        </div>
+        <div class="chakra" id="recent">
+          <div class="ours">RECENTS</div>
+          <div class="centre">
+            <div class="grid">
+                <img src="questionmark.png" alt="demo-image">
+                <div class="msn">
+                DEMO EVENT - VISION
+            </div></div>
+            <div class="grid">
+                <img src="questionmark.png" alt="demo-image">
+                <div class="msn">
+                DEMO EVENT - VISION
+            </div></div>
+            <div class="grid">
+                <img src="questionmark.png" alt="demo-image">
+                <div class="msn">
+                DEMO EVENT - VISION
+            </div></div>
+            <div class="grid">
+                <img src="questionmark.png" alt="demo-image">
+                <div class="msn">
+                DEMO EVENT - VISION
+            </div></div>
+          </div>
+        </div>
+        <div class="about chakra" id="about">
+          <div class="ours">ABOUT US</div>
+          <div class="msg">
+            <p>
+              Vision provide a suitable platform for the students of MANIT to
+              showcase their technical skills. It motivate them for research and
+              development work in any engineering related field. Vision guide
+              them during their research work (as much as its possible) and to
+              support them financially also (selected teams). It provides them
+              suitable facilities for their research work. (like by providing
+              24X7 lab and equipments). To motivate students in achieving the in
+              depth knowledge of their respective branches.
+            </p>
+          </div>
+        </div>
+        <div class="team chakra" id="team">
+          <div class="ours">OUR TEAM</div>
+          <div class="visionp">
+            <div class="q1">
+              <img src="R.png" alt="No Image Found" />
+              <div>
+                <p class="cse">VISION CSE</p>
+              </div>
+              <div class="iconsteam">
+                <span>
+                  <ion-icon name="logo-instagram" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-linkedin" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-facebook" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-twitter" class="social"></ion-icon>
+                </span>
+              </div>
+            </div>
+            <div class="q1">
+              <img src="R.png" alt="No Image Found" />
+              <div>
+                <p class="cse">VISION CSE</p>
+              </div>
+              <div class="iconsteam">
+                <span>
+                  <ion-icon name="logo-instagram" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-linkedin" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-facebook" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-twitter" class="social"></ion-icon>
+                </span>
+              </div>
+            </div>
+            <div class="q1">
+              <img src="R.png" alt="No Image Found" />
+              <div>
+                <p class="cse">VISION CSE</p>
+              </div>
+              <div class="iconsteam">
+                <span>
+                  <ion-icon name="logo-instagram" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-linkedin" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-facebook" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-twitter" class="social"></ion-icon>
+                </span>
+              </div>
+            </div>
+            <div class="q1">
+              <img src="R.png" alt="No Image Found" />
+              <div>
+                <p class="cse">VISION CSE</p>
+              </div>
+              <div class="iconsteam">
+                <span>
+                  <ion-icon name="logo-instagram" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-linkedin" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-facebook" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-twitter" class="social"></ion-icon>
+                </span>
+              </div>
+            </div>
+            <div class="q1">
+              <img src="R.png" alt="No Image Found" />
+              <div>
+                <p class="cse">VISION CSE</p>
+              </div>
+              <div class="iconsteam">
+                <span>
+                  <ion-icon name="logo-instagram" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-linkedin" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-facebook" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-twitter" class="social"></ion-icon>
+                </span>
+              </div>
+            </div>
+            <div class="q1">
+              <img src="R.png" alt="No Image Found" />
+              <div>
+                <p class="cse">VISION CSE</p>
+              </div>
+              <div class="iconsteam">
+                <span>
+                  <ion-icon name="logo-instagram" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-linkedin" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-facebook" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-twitter" class="social"></ion-icon>
+                </span>
+              </div>
+            </div>
+            <div class="q1">
+              <img src="R.png" alt="No Image Found" />
+              <div>
+                <p class="cse">VISION CSE</p>
+              </div>
+              <div class="iconsteam">
+                <span>
+                  <ion-icon name="logo-instagram" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-linkedin" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-facebook" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-twitter" class="social"></ion-icon>
+                </span>
+              </div>
+            </div>
+            <div class="q1">
+              <img src="R.png" alt="No Image Found" />
+              <div>
+                <p class="cse">VISION CSE</p>
+              </div>
+              <div class="iconsteam">
+                <span>
+                  <ion-icon name="logo-instagram" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-linkedin" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-facebook" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-twitter" class="social"></ion-icon>
+                </span>
+              </div>
+            </div>
+            <div class="q1">
+              <img src="R.png" alt="No Image Found" />
+              <div>
+                <p class="cse">VISION CSE</p>
+              </div>
+              <div class="iconsteam">
+                <span>
+                  <ion-icon name="logo-instagram" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-linkedin" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-facebook" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-twitter" class="social"></ion-icon>
+                </span>
+              </div>
+            </div>
+            <div class="q1">
+              <img src="R.png" alt="No Image Found" />
+              <div>
+                <p class="cse">VISION CSE</p>
+              </div>
+              <div class="iconsteam">
+                <span>
+                  <ion-icon name="logo-instagram" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-linkedin" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-facebook" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-twitter" class="social"></ion-icon>
+                </span>
+              </div>
+            </div>
+            <div class="q1">
+              <img src="R.png" alt="No Image Found" />
+              <div>
+                <p class="cse">VISION CSE</p>
+              </div>
+              <div class="iconsteam">
+                <span>
+                  <ion-icon name="logo-instagram" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-linkedin" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-facebook" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-twitter" class="social"></ion-icon>
+                </span>
+              </div>
+            </div>
+            <div class="q1">
+              <img src="R.png" alt="No Image Found" />
+              <div>
+                <p class="cse">VISION CSE</p>
+              </div>
+              <div class="iconsteam">
+                <span>
+                  <ion-icon name="logo-instagram" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-linkedin" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-facebook" class="social"></ion-icon>
+                </span>
+                <span>
+                  <ion-icon name="logo-twitter" class="social"></ion-icon>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="contact">
+        <div class="contact">
+          <img src="vision2.jpg" alt="vision" />
+        </div>
+        <div class="icono">
+        <span>
+          <ion-icon name="logo-instagram" class="social-v"></ion-icon>
+        </span>
+        <span>
+          <ion-icon name="logo-linkedin" class="social-v"></ion-icon>
+        </span>
+        <span>
+          <ion-icon name="logo-facebook" class="social-v"></ion-icon>
+        </span>
+        <span>
+          <ion-icon name="logo-twitter" class="social-v"></ion-icon>
+        </span>
+    </div>
+        <div class="git">
+            <p>Follow on GitHub</p>
+            <a href="https://github.com/satya-supercluster">Follow</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script src="webpage.js"></script>
 </html>
