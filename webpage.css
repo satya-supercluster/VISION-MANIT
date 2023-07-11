@@ -1,415 +1,627 @@
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-body {
-  background-image: url(blue.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-header {
-  margin-top: 5px;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  height: 8vh;
-  top:0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-}
-header #logo {
-  font-size: 2em;
-  width: 20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: aliceblue;
-}
-header nav {
-  width: 60vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin:5px 0 2px 0;
-    padding:2px 0 2px 0; */
-  flex-wrap: wrap;
-  /* border-right: 5px solid aliceblue; */
-  transition: width .5s ease;
-}
-#register {
-  width: 20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#start {
-  border: 3px solid white;
-  /* width: 10vw; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin: 0px 0 10px 0; */
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-size: 1em;
-  font-weight: 600;
-  background: transparent;
-  color: rgb(249, 249, 249);
-  cursor: pointer;
-  outline: none;
-  transition: 0.5s;
-}
-#start:hover {
-  background-color: #fff;
-  color: #162938;
-}
-header nav li {
-  list-style: none;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  margin: 5px 10px 5px 10px;
-  padding: 2px 8px 2px 8px;
-  border-radius: 8px;
-  /* display:flex;
-    flex-direction: column-reverse;
-    justify-content: space-between; */
-  font-size: 1.5em;
-  font-weight: 510;
-  color: aliceblue;
-  /* transition: 0.5s ease-in-out; */
-  cursor: pointer;
-}
-header nav li:hover {
-  color: #162938;
-  background-color: aliceblue;
-}
-header nav li .iconl{
-  height: 50vh;
-  width:50vw;
-  font-size:50px;
-  color:white;
-}
-header .menu{
-  display:none;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.7em;
-  width:5vw;
-  padding:10px 10px 10px 10px;
-  margin:10px 0 2px 0;
-  color:#fff;
-
-}
-/* .line {
-  position: absolute;
-  margin:5px 0px 5px 0px;
-  padding: 0;
-  height: 30px;
-  right:13vw;
-  border: 2.5px solid rgb(198, 185, 185);
-  cursor: default;
-} */
-.screen {
-  width: 400px;
-  height: 440px;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  backdrop-filter: blur(25px);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  transition: height 0.2s ease;
-  /* padding: 0px 40px 0px 40px; */
-  overflow: hidden;
-  z-index: 2;
-}
-.form-box {
-  width: 100%;
-  /* margin:40px; */
-  padding: 40px;
-}
-.form-box h2 {
-  font-size: 2em;
-  color: #162938;
-  text-align: center;
-}
-.input-box {
-  position: relative;
-  width: 100%;
-  height: 50px;
-  border-bottom: 4px solid #162938;
-  margin: 30px 0;
-}
-.input-box label {
-  position: absolute;
-  top: 0;
-  left: 5px;
-  transform: translateY(-50%);
-  font-size: 1.3em;
-  color: #162938;
-  font-weight: 700;
-  pointer-events: none;
-  transition: 0.5s ease;
-}
-.input-box input {
-  position: absolute;
-  bottom: -12px;
-  width: 88%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  padding: 0 35px 0 0;
-  font-size: 1.3em;
-}
-.input-box .icon {
-  position: absolute;
-  right: 8px;
-  font-size: 1.5em;
-  color: #162938;
-  line-height: 57px;
-  z-index: 3;
-}
-.remember-forget {
-  display: flex;
-  align-items: center;
-  font-size: 0.9em;
-  font-weight: 500;
-  margin: 0 0 15px 0;
-  justify-content: space-between;
-}
-.remember {
-  width: 50%;
-  color: #162938;
-}
-.forget {
-  width: 50%;
-  display: flex;
-  justify-content: right;
-  color: #162938;
-}
-input::-ms-reveal,
-input::-ms-clear {
-  display: none;
-} /* Don't know WTF it is!!! but removing it adds an unusual third eye */
-.remember-forget label input {
-  accent-color: #162938;
-  /* also this one */
-  margin-right: 3px;
-}
-.forget:hover {
-  text-decoration: underline;
-}
-.btn {
-  width: 100%;
-  height: 40px;
-  background: #162938;
-  border: none;
-  outline: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1em;
-  color: #fff;
-}
-.login-register {
-  display: flex;
-  font-size: 0.9em;
-  color: #162938;
-  justify-content: center;
-  font-weight: 500;
-  margin: 25px 0 10px 0;
-}
-.login-register a {
-  color: #162938;
-  text-decoration: none;
-  font-weight: 600;
-}
-.login-register a:hover {
-  text-decoration: underline;
-}
-.close-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45px;
-  height: 45px;
-  background: #162938;
-  color: #fff;
-  border-bottom-left-radius: 20px;
-  cursor: pointer;
-  z-index: 1;
-}
-.reg-tc .remember {
-  width: 100%;
-}
-.registration-window {
-  position: absolute;
-  height: 470px;
-  width: 320px;
-  top: -5px;
-  transform: translateX(500px);
-}
-.screen.active {
-  height: 570px;
-}
-.screen.active .form-box.login-window {
-  transition: none;
-  transform: translateX(-500px);
-}
-.screen.active .form-box.registration-window {
-  transition: none;
-  transform: translateX(0px);
-}
-.incoming {
-  display: flex;
-}
-/* .hider{
+    margin: 0;
+    padding: 0;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  body {
+    background-color:#162938;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  header {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    height: 8vh;
+    top:0;
+    /* left: 0; */
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+  }
+  header nav li a{
+    text-decoration: none;
+    color:#fff
+  }
+  header #logo {
+    font-size: 2em;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+  }
+  header nav {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin:5px 0 2px 0;
+      padding:2px 0 2px 0; */
+    flex-wrap: wrap;
+    /* border-right: 5px solid aliceblue; */
+    transition: width .5s ease;
+  }
+  #register {
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #start {
+    border: 3px solid white;
+    /* width: 10vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0px 0 10px 0; */
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    background: transparent;
+    color: rgb(249, 249, 249);
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+  }
+  #start:hover {
+    background-color: #fff;
+    color: #162938;
+  }
+  header nav li{
+    list-style: none;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 10px 5px 10px;
+    padding: 2px 8px 2px 8px;
+    border-radius: 8px;
+    /* display:flex;
+      flex-direction: column-reverse;
+      justify-content: space-between; */
+    font-size: 1.5em;
+    font-weight: 510;
+    color: aliceblue;
+    /* transition: 0.5s ease-in-out; */
+    cursor: pointer;
+  }
+  
+  header nav li a:hover {
+    color: #162938;
+    background-color: aliceblue;
+  }
+  header nav li:hover {
+    color: #162938;
+    background-color: aliceblue;
+  }
+  header nav li .iconl{
+    height: 50vh;
+    width:50vw;
+    font-size:50px;
+    color:white;
+  }
+  header .menu{
     display:none;
-} */
-.invalid {
-  position: absolute;
-  bottom: -1.3em;
-  left: 3px;
-  color: rgb(180, 10, 10);
-  /* transition: .5s ease; */
-}
-
-/* .register-btn{ width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7em;
+    width:5vw;
+    padding:10px 10px 10px 10px;
+    margin:10px 0 2px 0;
+    color:#fff;
+  }
+  /* .line {
+    position: absolute;
+    margin:5px 0px 5px 0px;
+    padding: 0;
+    height: 30px;
+    right:13vw;
+    border: 2.5px solid rgb(198, 185, 185);
+    cursor: default;
+  } */
+  .screen {
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.2s ease;
+    /* padding: 0px 40px 0px 40px; */
+    overflow: hidden;
+    z-index: 2;
+    position:absolute;
+    top:25vh;
+  }
+  .form-box {
+    width: 100%;
+    /* margin:40px; */
+    padding: 40px;
+  }
+  .form-box h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+  }
+  .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 4px solid #fff;
+    margin: 30px 0;
+  }
+  .input-box label {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 700;
+    pointer-events: none;
+    transition: 0.5s ease;
+  }
+  .input-box input {
+    position: absolute;
+    bottom: -12px;
+    width: 88%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 35px 0 0;
+    font-size: 1.3em;
+    color:#fff;
+  }
+  .input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.5em;
+    color: #fff;
+    line-height: 57px;
+    z-index: 3;
+  }
+  .remember-forget {
+    color:#fff;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+    justify-content: space-between;
+  }
+  .remember {
+    width: 50%;
+    color: #fff;
+  }
+  .forget {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    color: #fff;
+  }
+  input::-ms-reveal,
+  input::-ms-clear {
+    display: none;
+  } /* Don't know WTF it is!!! but removing it adds an unusual third eye */
+  .remember-forget label input {
+    accent-color: #162938;
+    /* also this one */
+    margin-right: 3px;
+  }
+  .forget:hover {
+    text-decoration: underline;
+  }
+  .btn {
+    width: 100%;
     height: 40px;
-    background: #162938;
-    border:none;
+    background: #fff;
+    border: none;
     outline: none;
     border-radius: 6px;
-    cursor:pointer;
-    font-size: 1em;
-    color:#fff;} */
-
-/* .container {
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #162938;
+  }
+  .login-register {
+    display: flex;
+    font-size: 0.9em;
+    color: #fff;
+    justify-content: center;
+    font-weight: 500;
+    margin: 25px 0 10px 0;
+  }
+  .login-register a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .login-register a:hover {
+    text-decoration: underline;
+  }
+  .close-icon {
     position: absolute;
-    width:70vw;
-    background:transparent;
-    backdrop-filter: blur(10px);
-    border: 2px solid #162938;
+    top: 0;
+    right: 0;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    color: #162938;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .reg-tc .remember {
+    width: 100%;
+  }
+  .registration-window {
+    position: absolute;
+    height: 470px;
+    width: 320px;
+    top: -5px;
+    transform: translateX(500px);
+  }
+  .screen.active {
+    height: 570px;
+  }
+  .screen.active .form-box.login-window {
+    transition: none;
+    transform: translateX(-500px);
+  }
+  .screen.active .form-box.registration-window {
+    transition: none;
+    transform: translateX(0px);
+  }
+  .incoming {
+    display: flex;
+  }
+  /* .hider{
+      display:none;
+  } */
+  .invalid {
+    position: absolute;
+    bottom: -1.3em;
+    left: 3px;
+    color: rgb(180, 10, 10);
+    /* transition: .5s ease; */
+    font-weight: 700;
+  }
+  
+  /* .register-btn{ width: 100%;
+      height: 40px;
+      background: #162938;
+      border:none;
+      outline: none;
+      border-radius: 6px;
+      cursor:pointer;
+      font-size: 1em;
+      color:#fff;} */
+  
+  /* .container {
+      position: absolute;
+      width:70vw;
+      background:transparent;
+      backdrop-filter: blur(10px);
+      border: 2px solid #162938;
+      color:#fff;
+      border-radius: 10px;
+      padding: 35px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+      font-size: 1.6em;
+      /* height:200px;
+      width:50vw;
+      z-index: -1;
+  } */
+  .actual-content{
+    position:absolute;
+    top:9.5vh;
+    width:95vw;
     color:#fff;
+  }
+  .actual-content .intro{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    word-spacing: 2px;
+    gap:.5em;
+    padding: 80px 40px 25px 40px;
+  }
+  .intro .heading{
+    font-size: 2.2em;
+    font-weight: 600;
+  }
+  .intro .message{
+    font-size: 2em;
+  }
+  .intro .discover{
+    display:inline-flex;
+    width:auto;
+    height:auto;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    margin:15px 0;
+    color: #162938;
+    font-weight: 700;
+  }
+  .intro .discover:hover{
+    color: #fff;
+    background-color: #c6e7;
+  }
+  .actual-content .chakra{
+    margin:0 4.45% 0 4.45%;
+  }
+  .chakra .centre{
+    width:100%;
+    padding:1% 0;
+    display:grid;
+    gap:40px;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+  }
+  .centre .grid{
+    display: flex;
+    text-align: justify;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 10px;
-    padding: 35px;
+    border:2px solid #fff;
+    padding:3% 3%;
+    font-size: 1em;
+  }
+  .grid img{
+    height:300px;
+  }
+  .grid div{
+    text-align: center;
+  }
+  .ours{
+    margin:80px 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2em;
+    text-align: center;
+    font-weight: 600;
+  }
+  .visionp .q1{
+    padding:2% 1.5%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border:2px solid #fff;
+  }
+  .q1 img{
+    padding:25px;
+    height:200px;
+  }
+  .chakra .visionp{
+    width:100%;
+    padding:1% 0;
+    display:flex;
+    flex-wrap: wrap;
+    gap:80px;
+    justify-content: space-around;
+  }
+  .msg p{
+    font-size: 1.6em;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 500;
+    text-align: justify;
+  }
+  .iconsteam{
+    padding:5% 1%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .social{
+    font-size: 2.5em;
+  }
+  .cse{
+    text-align: center;
+    margin:0 0 10%  0;
+    font-size: 1.5em;
+  }
+  .team{
+    border-bottom: 4px solid #fff;
+  }
+  footer{
+    margin:15px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  footer img{
+    height:120px;
+    border-radius: 8px;
+    border:2px solid #9a8989;
+  }
+  .social-v{
+    font-size:3em;
+  }
+  .git{
+    font-size: 1.3em;
     display:flex;
     justify-content: center;
     align-items: center;
-    text-align: justify;
-    font-size: 1.6em;
-    /* height:200px;
-    width:50vw;
-    z-index: -1;
-} */
-@media (max-width: 1050px){
-  header{
-    border-bottom: 2px solid #fff;
+    flex-direction: column;
+    text-align: center;
   }
-  header #logo{
-    width:47vw;
+  .icono{
+    word-spacing: 15px;
   }
-  header #register{
-    width:47vw;
+  .git a{
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    color:#162938;
+    margin:10px;
+    padding:10px 20px;
+    border-radius:8px;
   }
-  header #start{
-    padding: 10px 35px 10px 35px;
+  .git a:hover{
+    background-color: #c6e7;
+    color:white
   }
-  header nav{
-    display: none;
-    position:absolute;
-    justify-content: right;
-    align-items: center;
-    top:4em;
-    right:.6em;
-    width:auto;
-    height:auto;
-    border:0.5px solid #fff;
-    border-radius: 8px;
-    background-color: #162938;
-  }
-  header nav li{
-    transition: all .5s ease-in-out;
-    display: block;
-  }
-  .line{
-    display:none;
-  }
-  header .menu{
-    display:flex;
-    
-  }
-}
+  @media (max-width: 1050px){
+    .chakra .centre{
+      grid-template-columns: repeat(1, minmax(0px, 1fr));
+    }
+    .grid img{
+      height:200px;
+    }
+    footer{
+      flex-direction: column;
+      margin:15px 20px;
+    }
+    .social-v{
+      font-size: 1.5em;
+    }
+    footer img{
+      height: 100px;
+    }
+    .git a{
 
-@media (max-width: 490px){
-#register #start{
-  padding: 10px 10px 10px 10px;
-}
-}
-@media (max-width: 460px){
-header #logo{
-  font-size: 1.5em;
-}
-}
-@media (max-width: 415px){
-  #register{
-    width:10vw;
+      margin:10px;
+      padding:5px 15px;
+    }
+    header{
+      border-bottom: 2px solid #fff;
+    }
+    header #logo{
+      width:47vw;
+    }
+    header #register{
+      width:47vw;
+    }
+    header #start{
+      padding: 10px 35px 10px 35px;
+    }
+    header nav{
+      display: none;
+      position:absolute;
+      justify-content: right;
+      align-items: center;
+      top:4.2em;
+      right:.1em;
+      width:auto;
+      height:auto;
+      border:0.5px solid rgb(155, 151, 151);
+      border-radius: 8px;
+      background-color: #162938;
+    }
+    header nav li{
+      transition: all .5s ease-in-out;
+      display: block;
+    }
+    .line{
+      display:none;
+    }
+    header .menu{
+      display:flex;
+      
+    }
   }
+  @media(max-width:508px){
+    .grid img{
+      height:100px;
+    }
+    .actual-content .intro{
+      padding:30px 0 0 0;
+    }
+    .about .msg p{
+      text-align: center;
+      font-size:1em;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .intro .message{
+      font-size: 1.5em;
+      text-align: center;
+    }
+    .intro .discover{
+      font-size: 1.2em;
+      padding:10px 10px;
+    }
+  }
+  @media (max-width: 490px){
   #register #start{
-    padding: 5px 8px 8px 8px;
-    font-size: .75em;
+    padding: 5px 10px 10px 5px;
   }
+  }
+  @media (max-width: 460px){
   header #logo{
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
-.screen{
-  width:80%;
-}
-.invalid{
-  font-size: .8em;
-  bottom:-1.4em;
-}
-.registration-window{
-  width:80%;
-}
-/* header nav{
-  top:3.5em;
-} */
-header .menu{
-  width:8vw;
-}
-}
-@media (max-height:550px){
-  header{
-    top:15px;
   }
-}
-@media (max-width:380px){
-  .remember {
-    font-size: .75em;
-    font-weight: 800;
-    text-align: center;
+  @media (max-width: 415px){
+    #register{
+      width:10vw;
+    }
+    #register #start{
+      padding: 5px 8px 8px 8px;
+      font-size: .75em;
+    }
+    header #logo{
+      font-size: 1.2em;
+    }
+  .screen{
+    width:80%;
   }
-  .forget {
-    font-size: .75em;
-    font-weight: 600;
-    text-align: center;
+  .invalid{
+    font-size: .8em;
+    bottom:-1.4em;
   }
-  .login-register .ac{
-    font-size: 4vw;
+  .registration-window{
+    width:80%;
   }
-}
+  /* header nav{
+    top:3.5em;
+  } */
+  header .menu{
+    width:8vw;
+  }
+  }
+  @media (max-height:550px){
+    header{
+      top:15px;
+    }
+    .actual-content{
+      top:12vh;
+    }
+  }
+  @media (max-width:380px){
+    .remember {
+      font-size: .75em;
+      font-weight: 800;
+      text-align: center;
+    }
+    .forget {
+      font-size: .75em;
+      font-weight: 600;
+      text-align: center;
+    }
+    .login-register .ac{
+      font-size: 4vw;
+    }
+  }
