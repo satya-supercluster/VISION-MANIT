@@ -1,2 +1,2 @@
 # VISION MANIT
- just playing with what I know
+ Just Playing With What I Know
