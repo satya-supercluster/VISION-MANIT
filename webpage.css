@@ -141,8 +141,12 @@
     /* padding: 0px 40px 0px 40px; */
     overflow: hidden;
     z-index: 2;
-    position:absolute;
-    top:25vh;
+    position:sticky;
+    top:100px;
+  }
+  .kuch{
+    position:fixed;
+    z-index:5;
   }
   .form-box {
     width: 100%;
@@ -484,6 +488,9 @@
     color:white
   }
   @media (max-width: 1050px){
+    .kuch{
+      min-height: 1000vh;
+    }
     .chakra .centre{
       grid-template-columns: repeat(1, minmax(0px, 1fr));
     }
@@ -543,6 +550,7 @@
     }
   }
   @media(max-width:508px){
+
     .grid img{
       height:100px;
     }
@@ -574,7 +582,7 @@
     font-size: 1.5em;
   }
   }
-  @media (max-width: 415px){
+  @media (max-width: 420px){
     #register{
       width:10vw;
     }
@@ -586,7 +594,7 @@
       font-size: 1.2em;
     }
   .screen{
-    width:80%;
+    width:100%;
   }
   .invalid{
     font-size: .8em;
