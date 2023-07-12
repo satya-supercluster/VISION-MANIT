@@ -202,18 +202,24 @@
     align-items: center;
     font-size: 0.9em;
     font-weight: 500;
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     justify-content: space-between;
+  }
+  .checkmark{
+    position: relative;
+    top:3px;
   }
   .remember {
     width: 50%;
     color: #fff;
+    align-items: center;
   }
   .forget {
     width: 50%;
     display: flex;
     justify-content: right;
     color: #fff;
+    align-items: center;
   }
   input::-ms-reveal,
   input::-ms-clear {
@@ -625,7 +631,7 @@
       text-align: center;
     }
     .forget {
-      font-size: .75em;
+      font-size: .7em;
       font-weight: 600;
       text-align: center;
     }
